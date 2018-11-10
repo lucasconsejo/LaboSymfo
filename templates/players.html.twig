@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Player {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <br>
+        <h2>Player</h2><br>
+        <ul>
+        {% for player in players %}
+                <li>Id Joueur : {{ player.id }}</li>
+                <li>Equipe : {{ player.teamId.name }}</li>
+                <li>Prénom : {{ player.firstname }}</li>
+                <li>Nom : {{ player.lastname }}</li>
+                <li>Age : {{ player.age }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
